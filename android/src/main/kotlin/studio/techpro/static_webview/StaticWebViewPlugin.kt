@@ -80,11 +80,11 @@ class StaticWebViewPlugin : FlutterPlugin, MethodCallHandler, ActivityAware, Plu
         val intent = Intent(activityPluginBinding.activity, StaticWebViewActivity::class.java)
         intent.putExtra("url", config.url)
         intent.putExtra("title", config.title)
-        activityPluginBinding.activity.startActivityForResult(intent, 23)
+        activityPluginBinding.activity.startActivityForResult(intent, 12)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?): Boolean {
-        if (resultCode == Activity.RESULT_OK && requestCode == 23) {
+        if (resultCode == Activity.RESULT_OK && requestCode == 12) {
             result.success(hashMapOf("ok" to 1))
             return true
         }
