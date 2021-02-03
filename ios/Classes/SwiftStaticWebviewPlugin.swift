@@ -44,6 +44,11 @@ extension StaticWebViewConfig {
         guard let url = URL(string: urlString) else {
             throw StaticWebViewError.argument("URL should be valid")
         }
+
+        guard ["http", "https"].contains(url.scheme) else {
+            throw StaticWebViewError.argument("URL should be http or https")
+        }
+
         self.init(url: url, title: title)
     }
 }
