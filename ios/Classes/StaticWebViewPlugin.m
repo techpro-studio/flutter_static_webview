@@ -1,4 +1,4 @@
-#import "StaticWebviewPlugin.h"
+#import "StaticWebViewPlugin.h"
 #if __has_include(<static_webview/static_webview-Swift.h>)
 #import <static_webview/static_webview-Swift.h>
 #else
@@ -8,7 +8,7 @@
 #import "static_webview-Swift.h"
 #endif
 
-@implementation StaticWebviewPlugin
+@implementation StaticWebViewPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   [SwiftStaticWebViewPlugin registerWithRegistrar:registrar];
 }

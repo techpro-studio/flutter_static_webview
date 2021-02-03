@@ -29,9 +29,9 @@ flutter:
     platforms:
       android:
         package: studio.techpro.static_webview
-        pluginClass: StaticWebviewPlugin
+        pluginClass: StaticWebViewPlugin
       ios:
-        pluginClass: StaticWebviewPlugin
+        pluginClass: StaticWebViewPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

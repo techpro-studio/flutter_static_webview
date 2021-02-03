@@ -10,9 +10,10 @@ import androidx.appcompat.app.AppCompatActivity
 
 class StaticWebViewActivity: AppCompatActivity() {
 
-    override fun onDestroy() {
-        setResult(Activity.RESULT_OK)
-        super.onDestroy()
+    override fun onBackPressed() {
+        val intent = Intent()
+        setResult(Activity.RESULT_OK, intent)
+        super.onBackPressed()
     }
 
     @SuppressLint("SetJavaScriptEnabled")

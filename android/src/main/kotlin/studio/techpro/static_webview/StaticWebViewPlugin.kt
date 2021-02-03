@@ -63,12 +63,11 @@ class StaticWebViewPlugin : FlutterPlugin, MethodCallHandler, ActivityAware, Plu
               result.error(errCode, "URL should be http or https", null)
               return
             }
+            this.result = result
             showStaticWebViewActivity(StaticWebViewConfig(urlString, title))
           } catch (err: Exception){
             result.error("exception", err.localizedMessage, null)
           }
-
-          result.success("Android ${android.os.Build.VERSION.RELEASE}")
         }
         else -> {
           result.notImplemented()
